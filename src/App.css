@@ -484,3 +484,53 @@ section {
   background: white;
   box-shadow: 0 0 4px rgba(74, 119, 255, 0.4);
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  
+}
+
+.page-item {
+  list-style: none;
+}
+
+
+
+
+.carousel-item{
+  img{
+    width: 950px;
+    height: 450px;
+  }
+}
+
+@media(max-width: 480px){
+  .carousel-item{
+  img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+ }
+
+}
+
+@media(min-width: 481px) and (max-width: 768px){
+  .carousel-item{
+  img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+ }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .tuCarousel img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+}
