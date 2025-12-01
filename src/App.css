@@ -348,13 +348,10 @@ section {
 .cerrarBoton{
   background: none;
   border: none;
-  color:#4a90e2;
+  color:#f5f5f5;
   text-decoration: underline;
 }
 
-.cerrarBoton:hover{
-  color:#5da0ee;
-}
 
 .carritoTitulo {
   text-align: center;

@@ -55,18 +55,41 @@ const Productos = () => {
           ))}
         </div>
       </div>
-
-      <div className="flex justify-center gap-2 my-8">
-        {Array.from({length: totalPagina}, (_,indice) => (
-          <button key={indice + 1} className={`px-4 py-2 rounded ${
-              paginaActual === indice + 1 
-                ? "bg-black text-white" 
-                : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-            }`} onClick={() => cambiarPagina(indice + 1)}>
-              {indice + 1}
+      <br />
+      <nav aria-label="Page navigation">
+        <ul className="pagination justify-content-center my-8">
+          <li className={`page-item ${paginaActual === 1 ? "disabled" : ""}`}>
+            <button
+              className="page-link"
+              onClick={() => paginaActual > 1 && cambiarPagina(paginaActual - 1)}
+            >
+              «
             </button>
-        ))}
-      </div>
+          </li>
+          {Array.from({ length: totalPagina }, (_, indice) => (
+            <li key={indice + 1} className="page-item">
+              <button
+                className={`page-link ${paginaActual === indice + 1 ? "bg-black text-white" : ""
+                  }`}
+                onClick={() => cambiarPagina(indice + 1)}
+              >
+                {indice + 1}
+              </button>
+            </li>
+          ))}
+          <li className={`page-item ${paginaActual === totalPagina ? "disabled" : ""}`}>
+            <button
+              className="page-link"
+              onClick={() =>
+                paginaActual < totalPagina && cambiarPagina(paginaActual + 1)
+              }
+            >
+              »
+            </button>
+          </li>
+
+        </ul>
+      </nav>
 
 
     </>

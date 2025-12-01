@@ -36,7 +36,7 @@ const Nav = () => {
               </li>
               
               <li className="nav-item">
-                <a className="nav-link">Alcohol</a>
+                <Link className="nav-link" to={'/alcohol'}>Alcohol</Link>
               </li>
 
 

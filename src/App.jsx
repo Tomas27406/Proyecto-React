@@ -11,6 +11,7 @@ import Carrito from './Componentes/Carrito'
 import Login from './Pagina/Login'
 import Admin from './Pagina/Admin'
 import ResultadoBusqueda from './Componentes/ResultadoBusqueda'
+import Alcohol from './Pagina/Alcohol'
 function App() {
 
   return (
@@ -32,6 +33,7 @@ function App() {
         </RutaProtegida>}/>
       <Route path={'/productos/:id'} element={<DetalleProductos />}/>
       <Route path={'/busqueda'} element={<ResultadoBusqueda/>}/>
+      <Route path={'/alcohol'} element={<Alcohol/>}/>
      </Routes>
 
      <Footer />
