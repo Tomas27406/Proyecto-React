@@ -534,3 +534,7 @@ section {
     object-fit: cover;
   }
 }
+
+.titulo-gestion{
+  color: white;
+}

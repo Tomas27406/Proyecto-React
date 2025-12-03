@@ -53,7 +53,14 @@ const FormProducto = ({productoInicial = {}, modo = "agregar", cerrarFormulario}
                  onChange={manejarChange}
                 />
             </div>
-
+            <div>
+                <label>Categoria</label>
+                <input type="text" 
+                 name="categoria"
+                 value={productos.categoria || ''} 
+                 onChange={manejarChange}
+                />
+            </div>
             <div>
                 <label>Descripcion</label>
                 <input type="text" 

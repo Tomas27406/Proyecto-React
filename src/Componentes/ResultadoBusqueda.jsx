@@ -20,11 +20,14 @@ const ResultadoBusqueda = () => {
                             key={producto.id}
                             className="group relative bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow p-3"
                         >
-                            <img
-                                alt={producto.nombre}
-                                src={producto.imagen}
-                                className="w-full h-64 object-cover rounded-lg group-hover:opacity-90 transition"
-                            />
+                            <div className="w-full h-64 overflow-hidden rounded-lg">
+                                <img
+                                    alt={producto.nombre}
+                                    src={producto.imagen}
+                                    className="w-full h-full object-cover group-hover:opacity-90 transition"
+                                />
+                            </div>
+
 
                             <div className="mt-4 flex items-center justify-between">
                                 <h3 className="text-base font-medium text-gray-800 hover:text-blue-600 transition">
@@ -33,7 +36,7 @@ const ResultadoBusqueda = () => {
 
                                 <p className="text-lg font-semibold text-gray-900">
                                     ${producto.precio}
-                                </p> 
+                                </p>
                             </div>
                         </div>
                     ))

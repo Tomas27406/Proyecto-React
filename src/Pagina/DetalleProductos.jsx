@@ -16,10 +16,14 @@ const DetalleProductos = () => {
   }
    return(
     <>
-    <h2>Este es el numero de producto: {id}</h2>
-    <img src={producto.imagen} alt={producto.nombre} />
-    <h3>{producto.nombre}</h3>
-    <p>{producto.descripcion}</p>
+    <div className="detalleProducto">
+      <h2>Este es el numero de producto: {id}</h2>
+      <h3>{producto.nombre}</h3>
+      <img src={producto.imagen} alt={producto.nombre} />
+      <p>{producto.descripcion}</p>
+      
+    </div>
+    
     
     </>
  )

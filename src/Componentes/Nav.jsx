@@ -28,11 +28,11 @@ const Nav = () => {
 
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
-                <a className="nav-link">Moda</a>
+                <Link className="nav-link" to={'/moda'}>Moda</Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/Tecnologia">Tecnologia</Link>
+                <Link className="nav-link" to={'/Tecnologia'}>Tecnologia</Link>
               </li>
               
               <li className="nav-item">

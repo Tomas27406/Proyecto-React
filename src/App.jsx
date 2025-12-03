@@ -12,6 +12,7 @@ import Login from './Pagina/Login'
 import Admin from './Pagina/Admin'
 import ResultadoBusqueda from './Componentes/ResultadoBusqueda'
 import Alcohol from './Pagina/Alcohol'
+import Moda from './Pagina/Moda'
 function App() {
 
   return (
@@ -34,6 +35,7 @@ function App() {
       <Route path={'/productos/:id'} element={<DetalleProductos />}/>
       <Route path={'/busqueda'} element={<ResultadoBusqueda/>}/>
       <Route path={'/alcohol'} element={<Alcohol/>}/>
+      <Route path={'/moda'} element={<Moda/>}/>
      </Routes>
 
      <Footer />

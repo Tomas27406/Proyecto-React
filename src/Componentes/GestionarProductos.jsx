@@ -31,58 +31,58 @@ const GestionarProductos = () => {
     <>
       <h1 className="titulo-gestion">Gestión de productos</h1>
 
-<button
-  onClick={abrirFormulario}
-  data-bs-toggle="modal"
-  data-bs-target="#modalFormulario"
-  className="btn-agregar"
->
-  Agregar Producto
-</button>
+      <button
+        onClick={abrirFormulario}
+        data-bs-toggle="modal"
+        data-bs-target="#modalFormulario"
+        className="btn-agregar"
+      >
+        Agregar Producto
+      </button>
 
-{productos.length === 0 ? (
-  <div className="card-vacia">
-    <p>No hay productos</p>
-  </div>
-) : (
-  <div className="lista-productos">
-    {productos.map((producto) => (
-      <div key={producto.id} className="producto-card">
-        <div className="producto-info">
-          <div className="producto-img">
-            <img src={producto.imagen} alt={producto.nombre} />
-          </div>
-
-          <div className="producto-detalles">
-            <h2>{producto.nombre}</h2>
-            <p className="precio">${producto.precio}</p>
-          </div>
-
-          <div className="producto-botones">
-            <button
-              onClick={() => editarFormulario(producto)}
-              data-bs-toggle="modal"
-              data-bs-target="#modalFormulario"
-              className="btn-editar"
-            >
-              <CiEdit size={20} />
-              Editar
-            </button>
-
-            <button
-              className="btn-eliminar"
-              onClick={() => eliminarProducto(producto.id)}
-            >
-              <IoIosTrash size={20} />
-              Eliminar
-            </button>
-          </div>
-
+      {productos.length === 0 ? (
+        <div className="card-vacia">
+          <p>No hay productos</p>
         </div>
-      </div>
-    ))}
-  </div>
-)}
+      ) : (
+        <div className="lista-productos">
+          {productos.map((producto) => (
+            <div key={producto.id} className="producto-card">
+              <div className="producto-info">
+                <div className="producto-img">
+                  <img src={producto.imagen} alt={producto.nombre} />
+                </div>
+
+                <div className="producto-detalles">
+                  <h2>{producto.nombre}</h2>
+                  <p className="precio">${producto.precio}</p>
+                </div>
+
+                <div className="producto-botones">
+                  <button
+                    onClick={() => editarFormulario(producto)}
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalFormulario"
+                    className="btn-editar"
+                  >
+                    <CiEdit size={20} />
+                    Editar
+                  </button>
+
+                  <button
+                    className="btn-eliminar"
+                    onClick={() => eliminarProducto(producto.id)}
+                  >
+                    <IoIosTrash size={20} />
+                    Eliminar
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
       <div
         className="modal fade"
@@ -97,9 +97,18 @@ const GestionarProductos = () => {
               <h5 className="modal-title">
                 {modoF === "agregar" ? "Agregar Producto" : "Editar Producto"}
               </h5>
+
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+
             </div>
 
-            {/* CONTENIDO */}
+
+
             <div className="modal-body">
               {mostrarFormulario && (
                 <FormProducto
