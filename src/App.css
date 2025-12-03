@@ -538,3 +538,41 @@ section {
 .titulo-gestion{
   color: white;
 }
+
+.detalleProducto {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.detalleProducto h2 {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.detalleProducto h3 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.detalleProducto img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.detalleProducto p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
