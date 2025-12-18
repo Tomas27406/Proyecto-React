@@ -3,11 +3,16 @@ import { UseAuthContext } from "../context/AuthContext";
 import { CiShoppingCart, CiUser } from "react-icons/ci";
 import { IoIosClose } from "react-icons/io";
 import BarraBusqueda from "./BarraBusqueda";
+import { CarritoContext } from "../context/carritoContext";
+import { useContext } from "react";
 const Nav = () => {
   const { usuario, logout } = UseAuthContext();
   const AdminDentro = usuario === "admin";
   const estaLogueado = !!usuario;
+  const{carrito} = useContext(CarritoContext)
 
+  const totalAgregado = carrito.reduce((acu,item) => acu + item.quantity,
+  0)
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -69,6 +74,9 @@ const Nav = () => {
 
               <li className="nav-item">
                 <Link className="nav-link" to="/Carrito">
+                 {totalAgregado > 0 &&(
+                    <span className="carritoProductos">{totalAgregado}</span>
+                  )}
                   <CiShoppingCart />
                 </Link>
               </li>

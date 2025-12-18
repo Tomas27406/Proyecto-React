@@ -10,7 +10,13 @@ export const CarritoProvider = ({children}) => {
    const existe = carrito.some((item) => item.id === productos.id)
 
    if (existe) {
-     carrito.map((item) => item.id === productos.id ? {...item,quantity : item.quantity + 1} : item )
+    setCarrito(
+      carrito.map(item =>
+        item.id === productos.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      )
+    )
    }else{
       setCarrito([...carrito,{...productos, quantity : 1}])
    }
